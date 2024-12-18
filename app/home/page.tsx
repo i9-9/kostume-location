@@ -56,7 +56,7 @@ const Home: React.FC = () => {
   };
 
   const marqueeText: Record<Region, string> = {
-    Argentina: '3 CUOTAS SIN INTERES · ',
+    Argentina: '3 Y 6 CUOTAS SIN INTERES · ',
     Worldwide: 'WORLDWIDE SHIPPING · ',
   };
 
@@ -69,7 +69,8 @@ const Home: React.FC = () => {
     <div className='max-w-full min-h-screen bg-black'>
         <Marquee marqueeText={marqueeText[region]} />
         <Header link={externalLinks[region]} menu={menuItem[region]} />
-        <Banner collection="collection1" 
+        <VideoHero/>
+        {/*<Banner collection="collection1" 
           region={region}
           externalLinks={externalLinks} 
           text="#48SS25" 
@@ -82,7 +83,7 @@ const Home: React.FC = () => {
           externalLinks={externalLinks} 
           text="SWIMWEAR" 
           deviceType={deviceType} />
-        <Gallery link={externalLinks[region]} />
+        <Gallery link={externalLinks[region]} /> */}
         <Footer />
     </div>
   );
